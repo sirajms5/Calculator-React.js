@@ -1,0 +1,123 @@
+@mixin main-calc-props{
+    display: inline-grid;
+    background: linear-gradient(45deg,#FF5A36,#6A0DAD);
+    grid-template-columns: repeat(4, 65px);
+    grid-gap: 8px;
+    border: 2px solid black;
+    color: white;
+    user-select: none;
+  }
+  
+  body {
+    background: #628395
+  }
+
+  #content {
+    height: 100vh;
+  }
+
+  #developer {
+    font-style: italic;
+  }
+
+  a {
+    color: darkblue
+  }
+  
+  #main-calc {
+    @include main-calc-props;
+    grid-template-rows: auto auto repeat(5, 50px);
+    
+  }
+  
+  #main-calc-off {
+    @include main-calc-props;
+    grid-template-rows: auto 60px repeat(5, 50px);
+  }
+  
+  #control {
+    grid-area: 1/1/2/5;
+    display:flex;
+    justify-content: space-between;
+  }
+  
+  #power-button {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  #slider {
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    background: #C4C3D0;
+  }
+  
+  #slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background: #04AA6D;
+  }
+  #display {
+    grid-area: 2/1/3/5;
+    background: black;
+    color: yellow;
+    word-break:break-word;
+  }
+  
+  #clear {
+    grid-area: 3/1/4/3;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #841C26;
+  }
+  
+  .math {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7E8287
+  }
+  
+  .number {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #9DA39A
+  }
+  
+  #zero {
+    grid-area: 7/1/8/3;
+  }
+  
+  #equals {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 6/4/8/5;
+    background: #002FA7
+  }
+  
+  .grid-pointer {
+    cursor: pointer;
+  }
+  
+  .grid-pointer:hover {
+    opacity: 0.95;
+  }
+  
+  .grid-pointer:active {
+    transform:scale(0.98)
+  }
