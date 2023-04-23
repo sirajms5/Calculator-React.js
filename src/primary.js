@@ -79,7 +79,7 @@ class App extends React.Component {
       }
 
       // Handle operations 
-    } else if (operationRegex.test(this.state.clickedNumber)) {      
+    } else if (operationRegex.test(this.state.clickedNumber)) {
       // Handle operations when previous operation was '='
       if (this.state.currentOperation == "=") {
         this.state.currentOperation = event.target.textContent;
@@ -229,36 +229,41 @@ class App extends React.Component {
             </div>
           </div>
           <h4 class="h4 mt-2" id="developer">Developed By <a href="https://sirajsaleem.com" target="_blank">Siraj</a>.</h4>
+          <h5 class="h5" id="developer">GitHub: <a href="https://github.com/sirajms5/Calculator-React.js" target="_blank"><i class="fab fa-github"></i></a></h5>
         </div>
       )
     } else {
       return (
-        <div class="p-3" id="main-calc-off">
-          <div id="control">
-            <div> Power switch </div>
-            <ul id="power-button">
-              <li>{this.state.power}</li>
-              <li> <input id="slider" type="range" min="0" max="1" value={this.state.value} onClick={this.handlePowerClick} ></input> </li>
-            </ul>
+        <div class="d-flex flex-column justify-content-center align-items-center" id="content">
+          <div class="p-3" id="main-calc-off">
+            <div id="control">
+              <div> Power switch </div>
+              <ul id="power-button">
+                <li>{this.state.power}</li>
+                <li> <input id="slider" type="range" min="0" max="1" value={this.state.value} onClick={this.handlePowerClick} ></input> </li>
+              </ul>
+            </div>
+            <div id="display"></div>
+            <div id="clear">AC</div>
+            <div class="math" id="divide">/</div>
+            <div class="math" id="multiply">*</div>
+            <div class="number" id="seven">7</div>
+            <div class="number" id="eight">8</div>
+            <div class="number" id="nine">9</div>
+            <div class="math" id="subtract">-</div>
+            <div class="number" id="four">4</div>
+            <div class="number" id="five">5</div>
+            <div class="number" id="six">6</div>
+            <div class="math" id="add">+</div>
+            <div class="number" id="one">1</div>
+            <div class="number" id="two">2</div>
+            <div class="number" id="three">3</div>
+            <div class="" id="equals">=</div>
+            <div class="number" id="zero">0</div>
+            <div class="number" id="decimal">.</div>
           </div>
-          <div id="display"></div>
-          <div id="clear">AC</div>
-          <div class="math" id="divide">/</div>
-          <div class="math" id="multiply">*</div>
-          <div class="number" id="seven">7</div>
-          <div class="number" id="eight">8</div>
-          <div class="number" id="nine">9</div>
-          <div class="math" id="subtract">-</div>
-          <div class="number" id="four">4</div>
-          <div class="number" id="five">5</div>
-          <div class="number" id="six">6</div>
-          <div class="math" id="add">+</div>
-          <div class="number" id="one">1</div>
-          <div class="number" id="two">2</div>
-          <div class="number" id="three">3</div>
-          <div class="" id="equals">=</div>
-          <div class="number" id="zero">0</div>
-          <div class="number" id="decimal">.</div>
+          <h4 class="h4 mt-2" id="developer">Developed By <a href="https://sirajsaleem.com" target="_blank">Siraj</a>.</h4>
+          <h5 class="h5" id="developer">GitHub: <a href="https://github.com/sirajms5/Calculator-React.js" target="_blank"><i class="fab fa-github"></i></a></h5>
         </div>
       )
     }
