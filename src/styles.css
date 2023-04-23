@@ -23,7 +23,6 @@ a {
   color: white;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   grid-template-rows: auto auto repeat(5, 50px);
 }
@@ -37,7 +36,6 @@ a {
   color: white;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   grid-template-rows: auto 60px repeat(5, 50px);
 }
