@@ -1,5 +1,5 @@
 # Calculator-React.js
-This is a calculator application developed by using HTML, SCSS, React.js
+This is a calculator application developed by using HTML, SCSS, and React.js
 
 -----
 Screenshot for running program:
